@@ -65,6 +65,9 @@ http.createServer(async (req, res) => {
 
         console.log('deploy success')
     }
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    // 发送响应内容
+    res.write('<h1>Hello, World!</h1>');
     res.end('ok')
 }).listen(3000, () => {
     console.log('server is ready')
